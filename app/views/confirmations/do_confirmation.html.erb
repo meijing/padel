@@ -1,0 +1,6 @@
+<% if @confirmation.action == 'accept' %>
+  <p>You joined <%=@confirmable.name%></p>
+<% else %>
+  <p>You rejected joining <%=@confirmable.name%></p>
+<%end%>
+<%= link_to 'Back', confirmations_path %>

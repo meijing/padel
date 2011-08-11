@@ -1,0 +1,29 @@
+<h1>Listing confirmations</h1>
+
+<table>
+  <tr>
+    <th>Confirmable type</th>
+    <th>Confirmable</th>
+    <th>Code</th>
+    <th>Action</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @confirmations.each do |confirmation| %>
+  <tr>
+    <td><%= confirmation.confirmable_type %></td>
+    <td><%= confirmation.confirmable_id %></td>
+    <td><%= confirmation.code %></td>
+    <td><%= confirmation.action %></td>
+    <td><%= link_to 'Show', confirmation %></td>
+    <td><%= link_to 'Edit', edit_confirmation_path(confirmation) %></td>
+    <td><%= link_to 'Destroy', confirmation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Confirmation', new_confirmation_path %>

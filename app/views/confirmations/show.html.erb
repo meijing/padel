@@ -1,0 +1,8 @@
+<% if @confirmation.action == 'accept' %>
+<p>Are you sure you want to join <%=@confirmation.confirmable.name%>?</p>
+<% else %>
+<p>Are you sure you want to reject joining <%=@confirmation.confirmable.name%>?</p>
+<%  end %>
+<%= button_to "Yes", do_confirmation_url(@confirmation)  %>
+<%= link_to 'Edit', edit_confirmation_path(@confirmation) %> |
+<%= link_to 'Back', confirmations_path %>
