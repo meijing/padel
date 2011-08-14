@@ -10,20 +10,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :player1_id %><br />
-    <%= collection_select :team, :player1_id, Player.all, :id, :name %><br />
-  </div>
-  <div class="field">
-    <%= f.label :player2_id %><br />
-    <%= collection_select :team, :player2_id, Player.all, :id, :name %><br />
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+<div class="team_panel">
+    <div class="field">
+      <%= f.label :player1_id %><br />
+      <%= collection_select :team, :player1_id, Player.all, :id, :name %><br />
+    </div>
+    <div class="field">
+      <%= f.label :player2_id %><br />
+      <%= collection_select :team, :player2_id, Player.all, :id, :name %><br />
+    </div>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>

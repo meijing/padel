@@ -9,7 +9,7 @@ Feature: Team membership confirmation ask for other team
     And an existing player "player2" with email "2@a.com"
     And a "team1" team creation process for "player1" and "player2" initiated by "player1"
 
-@todo
+
  Scenario: Click on email's confirmation OK button to confirm membership
     When I click in the "Confirm" button of the received email
     Then I should see "Are you sure you want to join team1?"
@@ -17,7 +17,7 @@ Feature: Team membership confirmation ask for other team
     Then I should see "You joined team1"
     And "1@a.com" should receive a "team1" membership confirmation email
     And "2@a.com" should receive a "team1" membership confirmation email
-@wip
+
   Scenario: Click on email's confirmation Reject button to reject membership
     When I click in the "Reject" button of the received email
     Then I should see "Are you sure you want to reject joining team1?"
